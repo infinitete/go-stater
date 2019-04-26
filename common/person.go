@@ -1,6 +1,17 @@
 package common
 
 type Person struct {
-	Name string
-	Age  int16
+	name string
+	age  int16
+}
+
+func GetName(p *Person) string {
+	return p.name
+}
+
+func MakePerson(name string, age int16) Person {
+	return Person{
+		name: name,
+		age:  age,
+	}
 }
